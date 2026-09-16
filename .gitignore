@@ -1,1 +1,11 @@
+# Dependencies
 node_modules
+dist
+dist-ssr
+*.local
+
+# OS & Editor files
+.DS_Store
+.vscode
+.idea
+*.log
