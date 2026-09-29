@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBECEF"/>
+      <stop offset="100%" stop-color="#DADCE0"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E1E24"/>
+      <stop offset="100%" stop-color="#121216"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.12"/>
+    </filter>
+    <filter id="floatShadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Browser Frame Canvas -->
+  <rect width="800" height="500" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Window Top Bar -->
+  <path d="M0,16 Q0,0 16,0 L784,0 Q800,0 800,16 L800,42 L0,42 Z" fill="#D2D5DC"/>
+  <circle cx="28" cy="21" r="5.5" fill="#EF4444"/>
+  <circle cx="46" cy="21" r="5.5" fill="#F59E0B"/>
+  <circle cx="64" cy="21" r="5.5" fill="#10B981"/>
+  
+  <!-- URL Address Bar -->
+  <rect x="180" y="9" width="440" height="24" rx="12" fill="#FFFFFF" opacity="0.9"/>
+  <text x="400" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#4B5563" text-anchor="middle" font-weight="500">smartcart.dev/optimizer?postal=T5J1N2</text>
+
+  <!-- 1600 Floating Header Nav -->
+  <rect x="80" y="60" width="640" height="46" rx="23" fill="#FFFFFF" filter="url(#cardShadow)"/>
+  
+  <!-- SmartCart Logo -->
+  <circle cx="110" cy="83" r="14" fill="#18181B"/>
+  <path d="M104,78 L107,78 L110,87 L116,87 L118,80 L108,80" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="111" cy="89" r="1.5" fill="#FFFFFF"/>
+  <circle cx="115" cy="89" r="1.5" fill="#FFFFFF"/>
+  <text x="132" y="88" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="15" font-weight="800" fill="#09090B">SmartCart</text>
+
+  <!-- Nav links -->
+  <text x="290" y="87" font-family="sans-serif" font-size="12" font-weight="700" fill="#09090B">Optimizer</text>
+  <text x="375" y="87" font-family="sans-serif" font-size="12" font-weight="500" fill="#71717A">Weekly Flyers</text>
+  <text x="480" y="87" font-family="sans-serif" font-size="12" font-weight="500" fill="#71717A">Stores (22)</text>
+
+  <!-- Location Badge -->
+  <rect x="580" y="68" width="125" height="30" rx="15" fill="#F4F4F5"/>
+  <circle cx="594" cy="83" r="3.5" fill="#10B981"/>
+  <text x="604" y="87" font-family="sans-serif" font-size="11" font-weight="700" fill="#18181B">Edmonton YEG</text>
+
+  <!-- Hero Content -->
+  <text x="400" y="148" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="28" font-weight="800" fill="#09090B" text-anchor="middle" letter-spacing="-0.5">Smarter grocery runs. Guaranteed lowest bill.</text>
+  <text x="400" y="174" font-family="sans-serif" font-size="13" font-weight="400" fill="#52525B" text-anchor="middle">Combinatorial multi-store basket optimizer saving up to 42% across Edmonton supermarkets.</text>
+
+  <!-- The 3 Optimization Plan Cards -->
+  <g transform="translate(60, 205)">
+    <!-- Plan 1: Maximum Saver (Winner / Highlighted) -->
+    <rect x="0" y="0" width="210" height="255" rx="16" fill="#FFFFFF" stroke="#18181B" stroke-width="2.5" filter="url(#floatShadow)"/>
+    <rect x="14" y="14" width="98" height="20" rx="10" fill="#18181B"/>
+    <text x="63" y="28" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">PLAN 01 // BEST</text>
+    <text x="14" y="54" font-family="sans-serif" font-size="14" font-weight="800" fill="#09090B">Maximum Saver</text>
+    <text x="14" y="69" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">Multi-Store Split (3 Stops)</text>
+    
+    <text x="14" y="104" font-family="sans-serif" font-size="32" font-weight="900" fill="#09090B">$79.80</text>
+    <rect x="135" y="85" width="62" height="22" rx="6" fill="#DCFCE7"/>
+    <text x="166" y="100" font-family="sans-serif" font-size="11" font-weight="800" fill="#15803D" text-anchor="middle">-38% SAVED</text>
+
+    <line x1="14" y1="120" x2="196" y2="120" stroke="#E4E4E7" stroke-width="1"/>
+    
+    <text x="14" y="138" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#3F3F46">Groceries: $74.60 · Gas: $5.20</text>
+    <text x="14" y="154" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">14.2 km loop @ $1.42/L fuel model</text>
+
+    <!-- Allocated Stores -->
+    <g transform="translate(14, 168)">
+      <rect x="0" y="0" width="182" height="22" rx="6" fill="#FEF08A"/>
+      <text x="8" y="15" font-family="sans-serif" font-size="10" font-weight="800" fill="#713F12">No Frills (4 items · $26.10)</text>
+    </g>
+    <g transform="translate(14, 196)">
+      <rect x="0" y="0" width="182" height="22" rx="6" fill="#DBEAFE"/>
+      <text x="8" y="15" font-family="sans-serif" font-size="10" font-weight="800" fill="#1E40AF">Walmart (5 items · $31.80)</text>
+    </g>
+    <g transform="translate(14, 224)">
+      <rect x="0" y="0" width="182" height="22" rx="6" fill="#E0E7FF"/>
+      <text x="8" y="15" font-family="sans-serif" font-size="10" font-weight="800" fill="#3730A3">Superstore (3 items · $16.70)</text>
+    </g>
+  </g>
+
+  <!-- Plan 2: Best Single Run -->
+  <g transform="translate(295, 205)">
+    <rect x="0" y="0" width="200" height="255" rx="16" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="14" y="28" font-family="sans-serif" font-size="11" font-weight="700" fill="#71717A">PLAN 02</text>
+    <text x="14" y="52" font-family="sans-serif" font-size="14" font-weight="800" fill="#09090B">Best Single Run</text>
+    <text x="14" y="68" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">1 Stop · Walmart Supercentre</text>
+    
+    <text x="14" y="104" font-family="sans-serif" font-size="30" font-weight="900" fill="#09090B">$98.40</text>
+    <text x="14" y="125" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#71717A">Groceries: $95.80 · Gas: $2.60</text>
+    
+    <line x1="14" y1="140" x2="186" y2="140" stroke="#E4E4E7" stroke-width="1"/>
+    
+    <text x="14" y="162" font-family="sans-serif" font-size="10" font-weight="600" fill="#27272A">Single destination route</text>
+    <text x="14" y="180" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">Lowest cost at a single grocer</text>
+    <text x="14" y="198" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">Zero multi-store hassle</text>
+    <text x="14" y="216" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">6.8 km round trip</text>
+  </g>
+
+  <!-- Plan 3: In-Stock Guaranteed -->
+  <g transform="translate(515, 205)">
+    <rect x="0" y="0" width="200" height="255" rx="16" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="14" y="28" font-family="sans-serif" font-size="11" font-weight="700" fill="#71717A">PLAN 03</text>
+    <text x="14" y="52" font-family="sans-serif" font-size="14" font-weight="800" fill="#09090B">In-Stock Verified</text>
+    <text x="14" y="68" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">Zero Out-Of-Stock Risk</text>
+    
+    <text x="14" y="104" font-family="sans-serif" font-size="30" font-weight="900" fill="#09090B">$104.20</text>
+    <text x="14" y="125" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#71717A">Groceries: $100.90 · Gas: $3.30</text>
+
+    <line x1="14" y1="140" x2="186" y2="140" stroke="#E4E4E7" stroke-width="1"/>
+    
+    <text x="14" y="162" font-family="sans-serif" font-size="10" font-weight="600" fill="#15803D">✓ 100% Shelf Availability</text>
+    <text x="14" y="180" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">Direct warehouse catalog</text>
+    <text x="14" y="198" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">No substituted ingredients</text>
+    <text x="14" y="216" font-family="sans-serif" font-size="10" font-weight="500" fill="#71717A">Guaranteed fulfillment</text>
+  </g>
+</svg>
