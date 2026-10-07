@@ -15,6 +15,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
   tags,
   image,
   sourceCodeLink,
+  liveLink,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="w-full">
@@ -34,7 +35,29 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
                 alt={name}
                 className="h-full w-full rounded-[20px] object-cover object-top"
               />
-              <div className="absolute inset-0 m-4 flex justify-end pointer-events-none">
+              <div className="absolute inset-0 m-4 flex justify-end gap-2.5 pointer-events-none">
+                {liveLink && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(liveLink, "_blank");
+                    }}
+                    className="pointer-events-auto group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-black/90 shadow-xl border border-white/20 hover:border-emerald-400 hover:bg-emerald-600 hover:scale-110 active:scale-95 transition-all"
+                    title="View Live Demo"
+                  >
+                    <svg
+                      className="h-5 w-5 fill-none stroke-white stroke-[2.2] text-white group-hover:scale-105 transition-transform"
+                      viewBox="0 0 24 24"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </button>
+                )}
                 <button
                   type="button"
                   onClick={(e) => {
@@ -59,7 +82,22 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
             </div>
 
             <div className="mt-6">
-              <h3 className="text-[26px] font-bold text-white tracking-tight">{name}</h3>
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-[26px] font-bold text-white tracking-tight">{name}</h3>
+                {liveLink && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(liveLink, "_blank");
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/25 transition-all cursor-pointer"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    Live Demo
+                  </button>
+                )}
+              </div>
               <p className="text-secondary mt-3 text-[15px] sm:text-[16px] leading-[26px]">{description}</p>
             </div>
           </div>

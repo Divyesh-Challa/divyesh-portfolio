@@ -137,6 +137,7 @@ const projects: TProject[] = [
     ],
     image: smartcart,
     sourceCodeLink: "https://github.com/Divyesh-Challa/SmartCart",
+    liveLink: "https://smartcart-9djq.onrender.com",
   },
   {
     name: "Amazon Review Synthesizer",
