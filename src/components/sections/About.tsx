@@ -7,6 +7,7 @@ import { SectionWrapper } from "../../hoc";
 import { fadeIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
+import { SpotlightCard } from "../ui";
 
 interface IServiceCard {
   index: number;
@@ -27,7 +28,10 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="green-pink-gradient shadow-card w-full h-full rounded-[24px] p-[1px]"
     >
-      <div className="bg-tertiary flex min-h-[300px] h-full flex-col items-center justify-evenly rounded-[24px] px-6 py-8">
+      <SpotlightCard
+        spotlightColor="rgba(0, 206, 168, 0.18)"
+        className="bg-tertiary flex min-h-[300px] h-full flex-col items-center justify-evenly rounded-[24px] px-6 py-8"
+      >
         <img
           src={icon}
           alt={title}
@@ -37,7 +41,7 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
         <h3 className="text-center text-[22px] font-bold text-white leading-[30px]">
           {title}
         </h3>
-      </div>
+      </SpotlightCard>
     </motion.div>
   </Tilt>
 );

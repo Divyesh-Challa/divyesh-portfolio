@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../../constants/styles";
 import { ComputersCanvas } from "../canvas";
 import { config } from "../../constants/config";
+import { Magnet, DecryptedText } from "../ui";
 
 const Hero = () => {
   return (
@@ -17,7 +18,10 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">{config.hero.name}</span>
+            Hi, I'm{" "}
+            <span className="text-[#915EFF]">
+              <DecryptedText text={config.hero.name} />
+            </span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100 mt-3`}>
             {config.hero.p[0]} <br className="hidden sm:block" />
@@ -29,21 +33,23 @@ const Hero = () => {
       <ComputersCanvas />
 
       <div className="xs:bottom-10 absolute bottom-32 flex w-full items-center justify-center">
-        <a href="#about">
-          <div className="border-secondary flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="bg-secondary mb-1 h-3 w-3 rounded-full"
-            />
-          </div>
-        </a>
+        <Magnet padding={25} strength={0.35}>
+          <a href="#about" aria-label="Scroll to About section">
+            <div className="border-secondary flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 p-2 cursor-pointer hover:border-white transition-colors">
+              <motion.div
+                animate={{
+                  y: [0, 24, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className="bg-secondary mb-1 h-3 w-3 rounded-full"
+              />
+            </div>
+          </a>
+        </Magnet>
       </div>
     </section>
   );

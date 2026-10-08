@@ -207,3 +207,61 @@ body {
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+/* React Bits: Shimmering metallic beam */
+@keyframes shinyText {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.shiny-text {
+  background: linear-gradient(
+    110deg,
+    #ffffff 0%,
+    #e2e8f0 35%,
+    #915eff 50%,
+    #ffffff 65%,
+    #aaa6c3 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shinyText 6s linear infinite;
+}
+
+.shiny-pill {
+  position: relative;
+  overflow: hidden;
+}
+
+.shiny-pill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  animation: pillShine 3.5s ease-in-out infinite;
+}
+
+@keyframes pillShine {
+  0% {
+    transform: translateX(-100%);
+  }
+  40%, 100% {
+    transform: translateX(100%);
+  }
+}
+

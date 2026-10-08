@@ -4,6 +4,7 @@ import { styles } from "../../constants/styles";
 import { navLinks } from "../../constants";
 import { logo, menu, close } from "../../assets";
 import { config } from "../../constants/config";
+import { Magnet } from "../ui";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>();
@@ -51,24 +52,26 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } fixed top-0 z-20 flex w-full items-center py-5 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      } fixed top-0 z-20 flex w-full items-center py-5 transition-colors duration-300 ${
+        scrolled ? "bg-primary/90 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between">
-        <a
-          href="#"
-          className="flex items-center gap-2 cursor-pointer"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          <img src={logo} alt="logo" className="h-10 w-10 object-contain" />
-          <p className="flex cursor-pointer text-[19px] sm:text-[20px] font-bold text-white tracking-wide">
-            {config.html.title}
-          </p>
-        </a>
+        <Magnet padding={20} strength={0.25}>
+          <a
+            href="#"
+            className="flex items-center gap-2 cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            <img src={logo} alt="logo" className="h-10 w-10 object-contain" />
+            <p className="flex cursor-pointer text-[19px] sm:text-[20px] font-bold text-white tracking-wide">
+              {config.html.title}
+            </p>
+          </a>
+        </Magnet>
 
         <ul className="hidden list-none flex-row gap-10 sm:flex">
           {navLinks.map((nav) => (
@@ -78,7 +81,9 @@ const Navbar = () => {
                 active === nav.id ? "text-white" : "text-secondary"
               } cursor-pointer text-[19px] font-medium hover:text-white transition-colors`}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <Magnet padding={15} strength={0.25}>
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </Magnet>
             </li>
           ))}
         </ul>

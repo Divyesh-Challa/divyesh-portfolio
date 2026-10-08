@@ -7,6 +7,7 @@ import { fadeIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
 import { TProject } from "../../types";
+import { SpotlightCard, Magnet } from "../ui";
 
 const ProjectCard: React.FC<{ index: number } & TProject> = ({
   index,
@@ -27,7 +28,10 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
         glareColor="#aaa6c3"
         className="w-full h-full"
       >
-        <div className="bg-tertiary w-full h-full rounded-[24px] p-8 flex flex-col justify-between shadow-card border border-white/5 hover:border-violet-500/30 transition-all">
+        <SpotlightCard
+          spotlightColor="rgba(145, 94, 255, 0.22)"
+          className="bg-tertiary w-full h-full rounded-[24px] p-8 flex flex-col justify-between shadow-card border border-white/5 hover:border-violet-500/40 transition-all"
+        >
           <div>
             <div className="relative h-[280px] sm:h-[340px] w-full overflow-hidden rounded-[20px] bg-black/40">
               <img
@@ -37,47 +41,51 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
               />
               <div className="absolute inset-0 m-4 flex justify-end gap-2.5 pointer-events-none">
                 {liveLink && (
+                  <Magnet padding={20} strength={0.35}>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(liveLink, "_blank");
+                      }}
+                      className="pointer-events-auto group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-black/90 shadow-xl border border-white/20 hover:border-emerald-400 hover:bg-emerald-600 hover:scale-110 active:scale-95 transition-all"
+                      title="View Live Demo"
+                    >
+                      <svg
+                        className="h-5 w-5 fill-none stroke-white stroke-[2.2] text-white group-hover:scale-105 transition-transform"
+                        viewBox="0 0 24 24"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </button>
+                  </Magnet>
+                )}
+                <Magnet padding={20} strength={0.35}>
                   <button
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      window.open(liveLink, "_blank");
+                      window.open(sourceCodeLink, "_blank");
                     }}
-                    className="pointer-events-auto group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-black/90 shadow-xl border border-white/20 hover:border-emerald-400 hover:bg-emerald-600 hover:scale-110 active:scale-95 transition-all"
-                    title="View Live Demo"
+                    className="pointer-events-auto group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-black/90 shadow-xl border border-white/20 hover:border-violet-400 hover:bg-[#915EFF] hover:scale-110 active:scale-95 transition-all"
+                    title="View GitHub Repository"
                   >
                     <svg
-                      className="h-5 w-5 fill-none stroke-white stroke-[2.2] text-white group-hover:scale-105 transition-transform"
+                      className="h-6 w-6 fill-white text-white group-hover:scale-105 transition-transform"
                       viewBox="0 0 24 24"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
                     >
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      />
                     </svg>
                   </button>
-                )}
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.open(sourceCodeLink, "_blank");
-                  }}
-                  className="pointer-events-auto group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-black/90 shadow-xl border border-white/20 hover:border-violet-400 hover:bg-[#915EFF] hover:scale-110 active:scale-95 transition-all"
-                  title="View GitHub Repository"
-                >
-                  <svg
-                    className="h-6 w-6 fill-white text-white group-hover:scale-105 transition-transform"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                    />
-                  </svg>
-                </button>
+                </Magnet>
               </div>
             </div>
 
@@ -85,17 +93,19 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
               <div className="flex items-start justify-between gap-3">
                 <h3 className="text-[24px] sm:text-[26px] font-bold text-white tracking-tight">{name}</h3>
                 {liveLink && (
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.open(liveLink, "_blank");
-                    }}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/25 transition-all cursor-pointer shrink-0 mt-1"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    Live Demo
-                  </button>
+                  <Magnet padding={15} strength={0.25}>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(liveLink, "_blank");
+                      }}
+                      className="shiny-pill inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/25 transition-all cursor-pointer shrink-0 mt-1"
+                    >
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      Live Demo
+                    </button>
+                  </Magnet>
                 )}
               </div>
               <p className="text-secondary mt-3 text-[15px] sm:text-[16px] leading-[26px]">{description}</p>
@@ -109,7 +119,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
               </p>
             ))}
           </div>
-        </div>
+        </SpotlightCard>
       </Tilt>
     </motion.div>
   );

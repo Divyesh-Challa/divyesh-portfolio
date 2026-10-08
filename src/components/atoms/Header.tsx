@@ -14,7 +14,7 @@ export const Header: React.FC<IHeader> = ({ useMotion, p, h2 }) => {
   const Content = () => (
     <>
       <p className={styles.sectionSubText}>{p}</p>
-      <h2 className={styles.sectionHeadText}>{h2}</h2>
+      <h2 className={`${styles.sectionHeadText} shiny-text`}>{h2}</h2>
     </>
   );
 

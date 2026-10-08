@@ -9,6 +9,7 @@ import {
   StarsCanvas,
 } from "./components";
 import { config } from "./constants/config";
+import { SmoothScroll } from "./components/ui";
 
 const App = () => {
   useEffect(() => {
@@ -18,19 +19,21 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-primary relative z-0">
-      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
-        <Navbar />
-        <Hero />
+    <SmoothScroll>
+      <div className="bg-primary relative z-0">
+        <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Tech />
+        <Works />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
       </div>
-      <About />
-      <Tech />
-      <Works />
-      <div className="relative z-0">
-        <Contact />
-        <StarsCanvas />
-      </div>
-    </div>
+    </SmoothScroll>
   );
 };
 

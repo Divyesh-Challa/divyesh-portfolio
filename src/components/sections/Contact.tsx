@@ -6,6 +6,7 @@ import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
+import { SpotlightCard, Magnet } from "../ui";
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map((input) => [input, ""])
@@ -66,42 +67,49 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="bg-black-100 flex-[0.75] w-full rounded-2xl p-8 shadow-card"
+        className="flex-[0.75] w-full"
       >
-        <Header useMotion={false} {...config.contact} />
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+        <SpotlightCard
+          spotlightColor="rgba(145, 94, 255, 0.16)"
+          className="bg-black-100 w-full rounded-2xl p-8 shadow-card border border-white/5"
         >
-          {Object.keys(config.contact.form).map((input) => {
-            const { span, placeholder } =
-              config.contact.form[input as keyof typeof config.contact.form];
-            const Component = input === "message" ? "textarea" : "input";
+          <Header useMotion={false} {...config.contact} />
 
-            return (
-              <label key={input} className="flex flex-col">
-                <span className="mb-4 font-medium text-white">{span}</span>
-                <Component
-                  type={input === "email" ? "email" : "text"}
-                  name={input}
-                  value={form[`${input}`]}
-                  onChange={handleChange}
-                  placeholder={placeholder}
-                  className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
-                  {...(input === "message" && { rows: 7 })}
-                />
-              </label>
-            );
-          })}
-          <button
-            type="submit"
-            className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none hover:bg-violet-700 transition-colors"
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="mt-12 flex flex-col gap-8"
           >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
+            {Object.keys(config.contact.form).map((input) => {
+              const { span, placeholder } =
+                config.contact.form[input as keyof typeof config.contact.form];
+              const Component = input === "message" ? "textarea" : "input";
+
+              return (
+                <label key={input} className="flex flex-col">
+                  <span className="mb-4 font-medium text-white">{span}</span>
+                  <Component
+                    type={input === "email" ? "email" : "text"}
+                    name={input}
+                    value={form[`${input}`]}
+                    onChange={handleChange}
+                    placeholder={placeholder}
+                    className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                    {...(input === "message" && { rows: 7 })}
+                  />
+                </label>
+              );
+            })}
+            <Magnet padding={20} strength={0.3}>
+              <button
+                type="submit"
+                className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none hover:bg-violet-700 transition-colors"
+              >
+                {loading ? "Sending..." : "Send"}
+              </button>
+            </Magnet>
+          </form>
+        </SpotlightCard>
       </motion.div>
 
       <motion.div
