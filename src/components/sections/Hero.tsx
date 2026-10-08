@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../../constants/styles";
 import { ComputersCanvas } from "../canvas";
 import { config } from "../../constants/config";
-import { Magnet, DecryptedText } from "../ui";
+import { Magnet } from "../ui";
 
 const Hero = () => {
   return (
@@ -18,10 +18,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm{" "}
-            <span className="text-[#915EFF]">
-              <DecryptedText text={config.hero.name} />
-            </span>
+            Hi, I'm <span className="text-[#915EFF]">{config.hero.name}</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100 mt-3`}>
             {config.hero.p[0]} <br className="hidden sm:block" />
