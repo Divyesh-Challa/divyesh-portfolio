@@ -68,7 +68,7 @@ export const config: TConfig = {
       p: "Introduction",
       h2: "Overview.",
       content:
-        "I am a Computing Science student at the University of Alberta specializing in high-concurrency backends, modern full-stack web applications, and applied AI systems. My work spans building Trackr (a high-concurrency career accelerator with Go, Next.js 15, and pgvector), SmartCart (an algorithmic multi-store grocery optimizer solving combinatorial basket economics and fuel routing), and Amazon Review Synthesizer (an AI Chrome MV3 extension extracting deep review sentiment). Skilled in Go, Python, TypeScript, and vector databases, I build resilient software that solves real-world challenges with algorithmic precision.",
+        "I'm a Computing Science student at the University of Alberta who genuinely loves the craft of building software. Whether I'm architecting resilient backend systems, polishing the subtle interactions that make a user interface feel effortless, or exploring practical AI tools, I treat engineering as a balance of solid fundamentals and thoughtful design. I care deeply about what happens under the hood—writing code that is clean, performant, and built to last—rather than just stitching together quick solutions. For me, the most rewarding part of development is taking an open-ended, complex problem and turning it into software that is sturdy behind the scenes and intuitive for real people. Outside of the code itself, I place a high value on curiosity, open collaboration, and working alongside teams that take genuine pride in their work, and I'm always eager to tackle challenging problems that create a meaningful impact.",
     },
     experience: {
       p: "What I have done so far",
