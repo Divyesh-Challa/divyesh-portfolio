@@ -82,8 +82,8 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
             </div>
 
             <div className="mt-6">
-              <div className="flex items-center justify-between gap-3">
-                <h3 className="text-[26px] font-bold text-white tracking-tight">{name}</h3>
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="text-[24px] sm:text-[26px] font-bold text-white tracking-tight">{name}</h3>
                 {liveLink && (
                   <button
                     type="button"
@@ -91,7 +91,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
                       e.stopPropagation();
                       window.open(liveLink, "_blank");
                     }}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/25 transition-all cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/25 transition-all cursor-pointer shrink-0 mt-1"
                   >
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     Live Demo
@@ -129,7 +129,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

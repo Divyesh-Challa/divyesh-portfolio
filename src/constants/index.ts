@@ -25,6 +25,7 @@ import {
   python,
   smartcart,
   amazon_synthesizer,
+  trackr,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -113,6 +114,32 @@ const experiences: TExperience[] = [];
 const testimonials: TTestimonial[] = [];
 
 const projects: TProject[] = [
+  {
+    name: "Trackr",
+    description:
+      "End-to-end career platform & pipeline accelerator for university tech recruiting. Features real-time Canadian tech co-op job ingestion, an interactive Kanban board with optimistic updates, ATS-tailored Jake's Resume Studio with LaTeX export, AI cover letter generator, and voice-integrated STAR interview simulator.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "golang",
+        color: "green-text-gradient",
+      },
+      {
+        name: "postgresql-pgvector",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "fastapi",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: trackr,
+    sourceCodeLink: "https://github.com/Divyesh-Challa/Trackr",
+    liveLink: "https://trackr-portal.vercel.app",
+  },
   {
     name: "SmartCart",
     description:

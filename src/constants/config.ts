@@ -68,7 +68,7 @@ export const config: TConfig = {
       p: "Introduction",
       h2: "Overview.",
       content:
-        "I am a Computing Science student at the University of Alberta with a passion for building software that solves concrete, everyday problems. My recent work includes SmartCart, an algorithmic multi-store grocery optimizer that accounts for real-world fuel costs across Canadian supermarkets, and the Amazon Review Synthesizer, an AI-powered Chrome extension that distills customer reviews into objective reliability scores. My interests center on algorithms, web applications, and practical AI tools. I am a quick learner, highly adaptable, and eager to contribute to impactful engineering teams.",
+        "I am a Computing Science student at the University of Alberta with a passion for building software that solves concrete, everyday problems. My recent work includes Trackr, an end-to-end career pipeline and internship accelerator with real-time job ingestion and AI interview coaching, SmartCart, an algorithmic multi-store grocery optimizer that accounts for real-world fuel costs across Canadian supermarkets, and the Amazon Review Synthesizer, an AI-powered Chrome extension that distills customer reviews into objective reliability scores. My interests center on algorithms, web applications, and practical AI tools. I am a quick learner, highly adaptable, and eager to contribute to impactful engineering teams.",
     },
     experience: {
       p: "What I have done so far",

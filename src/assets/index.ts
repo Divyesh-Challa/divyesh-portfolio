@@ -29,6 +29,8 @@ import tesla from "./company/tesla.png";
 
 import smartcart from "./smartcart.svg";
 import amazon_synthesizer from "./amazon_synthesizer.svg";
+import trackr from "./trackr.svg";
+import trackr_screenshot from "./trackr.png";
 
 export {
   logo,
@@ -59,4 +61,6 @@ export {
   tesla,
   smartcart,
   amazon_synthesizer,
+  trackr,
+  trackr_screenshot,
 };

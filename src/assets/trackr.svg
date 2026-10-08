@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="trackrBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <filter id="offerShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#10B981" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Browser Frame Canvas -->
+  <rect width="800" height="500" rx="16" fill="url(#trackrBg)"/>
+
+  <!-- Window Top Bar -->
+  <path d="M0,16 Q0,0 16,0 L784,0 Q800,0 800,16 L800,42 L0,42 Z" fill="#E2E8F0"/>
+  <circle cx="28" cy="21" r="5.5" fill="#EF4444"/>
+  <circle cx="46" cy="21" r="5.5" fill="#F59E0B"/>
+  <circle cx="64" cy="21" r="5.5" fill="#10B981"/>
+
+  <!-- URL Address Bar -->
+  <rect x="180" y="9" width="440" height="24" rx="12" fill="#FFFFFF" opacity="0.95"/>
+  <text x="400" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569" text-anchor="middle" font-weight="500">trackr-portal.vercel.app/board · Canadian Pipeline Active</text>
+
+  <!-- Top App Navigation Bar -->
+  <g transform="translate(0, 42)">
+    <rect width="800" height="46" fill="#FFFFFF"/>
+    <line x1="0" y1="46" x2="800" y2="46" stroke="#E2E8F0" stroke-width="1"/>
+
+    <!-- Trackr Brand -->
+    <rect x="25" y="10" width="26" height="26" rx="6" fill="#2563EB"/>
+    <text x="38" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle">Tr.</text>
+    <text x="58" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="15" font-weight="800" fill="#0F172A">trackr</text>
+    
+    <rect x="110" y="14" width="52" height="18" rx="9" fill="#F1F5F9"/>
+    <text x="136" y="26.5" font-family="sans-serif" font-size="9" font-weight="700" fill="#475569" text-anchor="middle">Canada</text>
+
+    <!-- Nav Links -->
+    <!-- Tracker (Active) -->
+    <rect x="180" y="10" width="76" height="26" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+    <text x="218" y="27" font-family="sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">⚡ Tracker</text>
+
+    <!-- Discover -->
+    <text x="286" y="27" font-family="sans-serif" font-size="11" font-weight="600" fill="#64748B">Discover</text>
+    <rect x="336" y="15" width="56" height="16" rx="8" fill="#DCFCE7"/>
+    <text x="364" y="26.5" font-family="sans-serif" font-size="8" font-weight="800" fill="#15803D" text-anchor="middle">INTERNSHIPS</text>
+
+    <!-- Resume Studio -->
+    <text x="415" y="27" font-family="sans-serif" font-size="11" font-weight="600" fill="#64748B">Resume Studio</text>
+
+    <!-- Interview Practice -->
+    <text x="515" y="27" font-family="sans-serif" font-size="11" font-weight="600" fill="#64748B">STAR Practice</text>
+
+    <!-- Master Profile Button -->
+    <rect x="668" y="10" width="107" height="26" rx="6" fill="#2563EB"/>
+    <text x="721" y="27" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Master Profile</text>
+  </g>
+
+  <!-- Page Header & Metrics Summary -->
+  <g transform="translate(25, 102)">
+    <!-- Title -->
+    <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="21" font-weight="800" fill="#0F172A">Your Career Pipeline, <tspan font-family="Georgia, serif" font-style="italic" font-weight="400" fill="#475569">Accelerated.</tspan></text>
+    <text x="0" y="39" font-family="sans-serif" font-size="11" font-weight="400" fill="#64748B">Live ATS keyword match, Jake's Resume Studio LaTeX export, &amp; voice STAR simulation.</text>
+
+    <!-- Top Right Quick Stats Pills -->
+    <g transform="translate(485, 4)">
+      <!-- Applications Count -->
+      <rect x="0" y="0" width="80" height="26" rx="6" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#cardShadow)"/>
+      <text x="40" y="17" font-family="sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle">📋 8 Applied</text>
+
+      <!-- Interview Rate -->
+      <rect x="88" y="0" width="100" height="26" rx="6" fill="#EFF6FF" stroke="#BFDBFE" filter="url(#cardShadow)"/>
+      <text x="138" y="17" font-family="sans-serif" font-size="10" font-weight="800" fill="#1D4ED8" text-anchor="middle">📈 38% Interview</text>
+
+      <!-- Offers -->
+      <rect x="196" y="0" width="70" height="26" rx="6" fill="#DCFCE7" stroke="#86EFAC" filter="url(#cardShadow)"/>
+      <text x="231" y="17" font-family="sans-serif" font-size="10" font-weight="900" fill="#15803D" text-anchor="middle">🏆 1 Offer</text>
+    </g>
+
+    <!-- Filter / Control Bar -->
+    <g transform="translate(0, 52)">
+      <rect x="0" y="0" width="280" height="24" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="12" y="16" font-family="sans-serif" font-size="10" fill="#94A3B8">🔍 Search company, role, or tech stack...</text>
+
+      <rect x="290" y="0" width="65" height="24" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="322" y="16" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#475569" text-anchor="middle">Remote</text>
+
+      <rect x="362" y="0" width="65" height="24" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="394" y="16" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#475569" text-anchor="middle">Hybrid</text>
+
+      <rect x="434" y="0" width="80" height="24" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="474" y="16" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#475569" text-anchor="middle">🇨🇦 2027+</text>
+
+      <rect x="635" y="0" width="115" height="24" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="692" y="16" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#334155" text-anchor="middle">Sort: Match Score ▼</text>
+    </g>
+  </g>
+
+  <!-- Kanban Pipeline Board Columns -->
+  <g transform="translate(25, 192)">
+    
+    <!-- COLUMN 1: Wishlist (Empty Dropzone) -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="138" height="28" rx="6" fill="#F1F5F9"/>
+      <text x="10" y="18" font-family="sans-serif" font-size="11" font-weight="700" fill="#475569">Wishlist</text>
+      <circle cx="82" cy="14" r="8" fill="#E2E8F0"/>
+      <text x="82" y="18" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#64748B" text-anchor="middle">0</text>
+
+      <rect x="0" y="34" width="138" height="250" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-dasharray="4,4" opacity="0.6"/>
+      <text x="69" y="155" font-family="sans-serif" font-size="10.5" fill="#94A3B8" text-anchor="middle">+ Drag roles here</text>
+    </g>
+
+    <!-- COLUMN 2: Applied (3 Applications) -->
+    <g transform="translate(150, 0)">
+      <rect x="0" y="0" width="186" height="28" rx="6" fill="#EFF6FF"/>
+      <text x="10" y="18" font-family="sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">Applied</text>
+      <circle cx="78" cy="14" r="8" fill="#DBEAFE"/>
+      <text x="78" y="18" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#1E40AF" text-anchor="middle">3</text>
+
+      <!-- Card 1: Stripe -->
+      <g transform="translate(0, 34)">
+        <rect x="0" y="0" width="186" height="120" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" filter="url(#cardShadow)"/>
+        <!-- Company & Match -->
+        <rect x="10" y="10" width="22" height="22" rx="5" fill="#6366F1"/>
+        <text x="21" y="25" font-family="sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">S</text>
+        <rect x="110" y="10" width="66" height="18" rx="9" fill="#DCFCE7"/>
+        <text x="143" y="22.5" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#15803D" text-anchor="middle">89% Match</text>
+
+        <!-- Role -->
+        <text x="10" y="46" font-family="sans-serif" font-size="11.5" font-weight="800" fill="#0F172A">Backend Infrastructure</text>
+        <text x="10" y="60" font-family="sans-serif" font-size="10" font-weight="600" fill="#64748B">Stripe · Seattle, WA (Remote)</text>
+        <text x="10" y="75" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#0D9488">$65 – $82 / hr CAD</text>
+
+        <!-- Footer / Jake's Resume Tailored Badge -->
+        <rect x="10" y="90" width="166" height="18" rx="4" fill="#F8FAFC"/>
+        <text x="16" y="102" font-family="sans-serif" font-size="8.5" font-weight="600" fill="#64748B">✓ Jake's Resume Tailored · Oct 4</text>
+      </g>
+
+      <!-- Card 2: Palantir -->
+      <g transform="translate(0, 162)">
+        <rect x="0" y="0" width="186" height="120" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" filter="url(#cardShadow)"/>
+        <rect x="10" y="10" width="22" height="22" rx="5" fill="#18181B"/>
+        <text x="21" y="25" font-family="sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">P</text>
+        <rect x="110" y="10" width="66" height="18" rx="9" fill="#DCFCE7"/>
+        <text x="143" y="22.5" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#15803D" text-anchor="middle">84% Match</text>
+
+        <text x="10" y="46" font-family="sans-serif" font-size="11.5" font-weight="800" fill="#0F172A">Forward Deployed Eng</text>
+        <text x="10" y="60" font-family="sans-serif" font-size="10" font-weight="600" fill="#64748B">Palantir · Toronto, ON</text>
+        <text x="10" y="75" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#0D9488">$135k/yr Pro-rated</text>
+
+        <rect x="10" y="90" width="166" height="18" rx="4" fill="#F8FAFC"/>
+        <text x="16" y="102" font-family="sans-serif" font-size="8.5" font-weight="600" fill="#64748B">✓ ATS Match Synced · Oct 5</text>
+      </g>
+    </g>
+
+    <!-- COLUMN 3: OA & Interviewing -->
+    <g transform="translate(348, 0)">
+      <rect x="0" y="0" width="186" height="28" rx="6" fill="#FEF3C7"/>
+      <text x="10" y="18" font-family="sans-serif" font-size="11" font-weight="700" fill="#B45309">Interviewing</text>
+      <circle cx="106" cy="14" r="8" fill="#FDE68A"/>
+      <text x="106" y="18" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#92400E" text-anchor="middle">2</text>
+
+      <!-- Card: Amazon SDE Intern -->
+      <g transform="translate(0, 34)">
+        <rect x="0" y="0" width="186" height="120" rx="10" fill="#FFFFFF" stroke="#FBBF24" stroke-width="1.4" filter="url(#cardShadow)"/>
+        <rect x="10" y="10" width="22" height="22" rx="5" fill="#EA580C"/>
+        <text x="21" y="25" font-family="sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">a</text>
+        <rect x="110" y="10" width="66" height="18" rx="9" fill="#DCFCE7"/>
+        <text x="143" y="22.5" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#15803D" text-anchor="middle">93% Match</text>
+
+        <text x="10" y="46" font-family="sans-serif" font-size="11.5" font-weight="800" fill="#0F172A">Software Dev Intern</text>
+        <text x="10" y="60" font-family="sans-serif" font-size="10" font-weight="600" fill="#64748B">Amazon · Vancouver, BC</text>
+        <text x="10" y="75" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#0D9488">$62 – $75 / hr CAD</text>
+
+        <!-- Stage pill -->
+        <rect x="10" y="88" width="166" height="20" rx="5" fill="#FEF3C7"/>
+        <text x="93" y="101.5" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#B45309" text-anchor="middle">🎙️ STAR Practice: Concurrency</text>
+      </g>
+
+      <!-- Card: Shopify Full Stack -->
+      <g transform="translate(0, 162)">
+        <rect x="0" y="0" width="186" height="120" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" filter="url(#cardShadow)"/>
+        <rect x="10" y="10" width="22" height="22" rx="5" fill="#0D9488"/>
+        <text x="21" y="25" font-family="sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">S</text>
+        <rect x="110" y="10" width="66" height="18" rx="9" fill="#DCFCE7"/>
+        <text x="143" y="22.5" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#15803D" text-anchor="middle">91% Match</text>
+
+        <text x="10" y="46" font-family="sans-serif" font-size="11.5" font-weight="800" fill="#0F172A">Full Stack Developer</text>
+        <text x="10" y="60" font-family="sans-serif" font-size="10" font-weight="600" fill="#64748B">Shopify · Remote Canada</text>
+        <text x="10" y="75" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#0D9488">$58 – $68 / hr CAD</text>
+
+        <rect x="10" y="88" width="166" height="20" rx="5" fill="#EFF6FF"/>
+        <text x="93" y="101.5" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#1D4ED8" text-anchor="middle">Round 2: Systems Design</text>
+      </g>
+    </g>
+
+    <!-- COLUMN 4: Offer Received (Highlighted) -->
+    <g transform="translate(546, 0)">
+      <rect x="0" y="0" width="204" height="28" rx="6" fill="#DCFCE7"/>
+      <text x="12" y="18" font-family="sans-serif" font-size="11" font-weight="800" fill="#15803D">🎉 Offer</text>
+      <circle cx="82" cy="14" r="8" fill="#BBF7D0"/>
+      <text x="82" y="18" font-family="sans-serif" font-size="9.5" font-weight="900" fill="#166534" text-anchor="middle">1</text>
+
+      <!-- Winning Offer Card -->
+      <g transform="translate(0, 34)">
+        <rect x="0" y="0" width="204" height="248" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2" filter="url(#offerShadow)"/>
+
+        <!-- Top celebration badge -->
+        <rect x="12" y="12" width="180" height="22" rx="6" fill="#10B981"/>
+        <text x="102" y="27" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">🏆 OFFER EXTENDED</text>
+
+        <!-- Company & Logo -->
+        <g transform="translate(12, 44)">
+          <rect x="0" y="0" width="28" height="28" rx="6" fill="#0284C7"/>
+          <text x="14" y="19" font-family="sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle">R</text>
+          
+          <rect x="110" y="4" width="70" height="20" rx="10" fill="#DCFCE7"/>
+          <text x="145" y="17.5" font-family="sans-serif" font-size="9" font-weight="800" fill="#15803D" text-anchor="middle">96% Match</text>
+        </g>
+
+        <!-- Role & Location -->
+        <text x="12" y="94" font-family="sans-serif" font-size="13" font-weight="800" fill="#0F172A">Systems Software Intern</text>
+        <text x="12" y="110" font-family="sans-serif" font-size="10.5" font-weight="600" fill="#64748B">RBC Capital Markets · Vancouver / SF</text>
+
+        <!-- Compensation Callout -->
+        <g transform="translate(12, 122)">
+          <rect x="0" y="0" width="180" height="48" rx="8" fill="#F0FDF4" stroke="#BBF7D0"/>
+          <text x="12" y="20" font-family="sans-serif" font-size="10" font-weight="700" fill="#166534">COMPENSATION PACKAGE</text>
+          <text x="12" y="38" font-family="sans-serif" font-size="14" font-weight="900" fill="#15803D">$68.50/hr <tspan font-size="10" font-weight="500" fill="#4B5563">+ $4,500 Relocation</tspan></text>
+        </g>
+
+        <!-- Decision Checklist -->
+        <g transform="translate(12, 180)">
+          <text x="0" y="12" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#334155">✓ Written Offer Letter Received</text>
+          <text x="0" y="27" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#334155">✓ Co-op Portal Approval Submitted</text>
+          <text x="0" y="42" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#15803D">✓ Accepted &amp; Board Updated!</text>
+        </g>
+
+        <rect x="12" y="214" width="180" height="22" rx="6" fill="#15803D"/>
+        <text x="102" y="229" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">Decision: Accepted 🎉</text>
+      </g>
+    </g>
+
+  </g>
+</svg>
