@@ -37,6 +37,7 @@ export type TNavLink = {
 
 export type TService = {
   subtitle?: string;
+  tags?: string[];
 } & Required<Omit<TCommonProps, "name">>;
 
 export type TMotion = {

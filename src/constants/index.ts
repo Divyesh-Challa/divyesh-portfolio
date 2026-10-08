@@ -26,6 +26,10 @@ import {
   smartcart,
   amazon_synthesizer,
   trackr,
+  iconBackend,
+  iconFrontend,
+  iconAi,
+  iconAlgo,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -47,22 +51,26 @@ const services: TService[] = [
   {
     title: "Go & Python Backends",
     subtitle: "Gin · FastAPI · High Concurrency",
-    icon: backend,
+    tags: ["Go", "FastAPI", "PostgreSQL"],
+    icon: iconBackend,
   },
   {
     title: "Next.js & React Interfaces",
     subtitle: "React 19 · App Router · Tailwind",
-    icon: web,
+    tags: ["Next.js 15", "TypeScript", "Tailwind"],
+    icon: iconFrontend,
   },
   {
     title: "AI & Vector Search Pipelines",
     subtitle: "pgvector · Gemini API · Speech STAR",
-    icon: mobile,
+    tags: ["pgvector", "Gemini", "Voice AI"],
+    icon: iconAi,
   },
   {
-    title: "Algorithmic Cost Optimization",
+    title: "Algorithmic Systems & Optimization",
     subtitle: "Combinatorics · Fuel Models · MV3",
-    icon: creator,
+    tags: ["Algorithms", "Heuristics", "MV3"],
+    icon: iconAlgo,
   },
 ];
 

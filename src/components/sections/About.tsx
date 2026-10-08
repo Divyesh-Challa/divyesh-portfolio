@@ -13,15 +13,22 @@ interface IServiceCard {
   index: number;
   title: string;
   subtitle?: string;
+  tags?: string[];
   icon: string;
 }
 
-const ServiceCard: React.FC<IServiceCard> = ({ index, title, subtitle, icon }) => (
+const ServiceCard: React.FC<IServiceCard> = ({
+  index,
+  title,
+  subtitle,
+  tags,
+  icon,
+}) => (
   <Tilt
     glareEnable
     tiltEnable
-    tiltMaxAngleX={25}
-    tiltMaxAngleY={25}
+    tiltMaxAngleX={20}
+    tiltMaxAngleY={20}
     glareColor="#aaa6c3"
     className="w-full h-full"
   >
@@ -30,25 +37,38 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, subtitle, icon }) =
       className="green-pink-gradient shadow-card w-full h-full rounded-[24px] p-[1px]"
     >
       <SpotlightCard
-        spotlightColor="rgba(0, 206, 168, 0.18)"
-        className="bg-tertiary flex min-h-[300px] h-full flex-col items-center justify-evenly rounded-[24px] px-6 py-8"
+        spotlightColor="rgba(0, 206, 168, 0.22)"
+        className="bg-tertiary flex min-h-[310px] h-full flex-col items-center justify-between rounded-[24px] px-6 py-8"
       >
         <img
           src={icon}
           alt={title}
-          className="h-20 w-20 object-contain"
+          className="h-20 w-20 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.4)]"
         />
 
-        <div className="flex flex-col items-center text-center">
-          <h3 className="text-center text-[21px] font-bold text-white leading-[28px]">
+        <div className="flex flex-col items-center text-center my-2">
+          <h3 className="text-center text-[20px] font-bold text-white leading-[26px]">
             {title}
           </h3>
           {subtitle && (
-            <p className="text-secondary mt-2.5 text-xs font-semibold tracking-wide">
+            <p className="text-secondary mt-2 text-xs font-semibold tracking-wide">
               {subtitle}
             </p>
           )}
         </div>
+
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap justify-center gap-1.5 mt-2">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="bg-black-100/70 border border-white/10 rounded-full px-2.5 py-0.5 text-[11px] font-medium text-slate-300"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </SpotlightCard>
     </motion.div>
   </Tilt>

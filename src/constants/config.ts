@@ -44,8 +44,8 @@ export const config: TConfig = {
   hero: {
     name: "Divyesh Challa",
     p: [
-      "I build practical web applications, Python backends,",
-      "and AI-powered tools that solve everyday problems.",
+      "I build high-concurrency Go & Python backends, modern",
+      "Next.js web applications, and applied AI systems.",
     ],
   },
   contact: {
@@ -68,7 +68,7 @@ export const config: TConfig = {
       p: "Introduction",
       h2: "Overview.",
       content:
-        "I am a Computing Science student at the University of Alberta with a passion for building software that solves concrete, everyday problems. My recent work includes Trackr, an end-to-end career pipeline and internship accelerator with real-time job ingestion and AI interview coaching, SmartCart, an algorithmic multi-store grocery optimizer that accounts for real-world fuel costs across Canadian supermarkets, and the Amazon Review Synthesizer, an AI-powered Chrome extension that distills customer reviews into objective reliability scores. My interests center on algorithms, web applications, and practical AI tools. I am a quick learner, highly adaptable, and eager to contribute to impactful engineering teams.",
+        "I am a Computing Science student at the University of Alberta specializing in high-concurrency backends, modern full-stack web applications, and applied AI systems. My work spans building Trackr (a high-concurrency career accelerator with Go, Next.js 15, and pgvector), SmartCart (an algorithmic multi-store grocery optimizer solving combinatorial basket economics and fuel routing), and Amazon Review Synthesizer (an AI Chrome MV3 extension extracting deep review sentiment). Skilled in Go, Python, TypeScript, and vector databases, I build resilient software that solves real-world challenges with algorithmic precision.",
     },
     experience: {
       p: "What I have done so far",
