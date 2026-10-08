@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradBackend" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00CEA8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="serverGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00CEA8"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="serverGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="glowBackend" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop -->
+  <circle cx="60" cy="60" r="54" fill="url(#bgGradBackend)" stroke="#00CEA8" stroke-width="1.5" stroke-opacity="0.35"/>
+  <circle cx="60" cy="60" r="44" fill="#0D1117" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- Server Blade 1 (Top) -->
+  <rect x="30" y="28" width="60" height="16" rx="5" fill="#161B22" stroke="url(#serverGrad1)" stroke-width="1.8" filter="url(#glowBackend)"/>
+  <circle cx="39" cy="36" r="2.5" fill="#00CEA8"/>
+  <circle cx="47" cy="36" r="2.5" fill="#38BDF8"/>
+  <line x1="56" y1="36" x2="81" y2="36" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Server Blade 2 (Middle) -->
+  <rect x="30" y="52" width="60" height="16" rx="5" fill="#161B22" stroke="url(#serverGrad1)" stroke-width="1.8"/>
+  <circle cx="39" cy="60" r="2.5" fill="#38BDF8"/>
+  <circle cx="47" cy="60" r="2.5" fill="#10B981"/>
+  <!-- Terminal Chevron in middle blade -->
+  <path d="M57 57 L61 60 L57 63" fill="none" stroke="#00CEA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="66" y1="63" x2="74" y2="63" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Server Blade 3 (Bottom - Database / Storage) -->
+  <rect x="30" y="76" width="60" height="16" rx="5" fill="#161B22" stroke="url(#serverGrad2)" stroke-width="1.8"/>
+  <circle cx="39" cy="84" r="2.5" fill="#00CEA8"/>
+  <circle cx="47" cy="84" r="2.5" fill="#38BDF8"/>
+  <line x1="56" y1="84" x2="81" y2="84" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- High Concurrency Pipeline Conduits -->
+  <path d="M22 60 L30 60" stroke="#00CEA8" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3"/>
+  <path d="M90 60 L98 60" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3"/>
+  <circle cx="21" cy="60" r="2.5" fill="#00CEA8"/>
+  <circle cx="99" cy="60" r="2.5" fill="#38BDF8"/>
+</svg>

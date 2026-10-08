@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradFrontend" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="reactGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <filter id="glowFrontend" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop -->
+  <circle cx="60" cy="60" r="54" fill="url(#bgGradFrontend)" stroke="#818CF8" stroke-width="1.5" stroke-opacity="0.35"/>
+  <circle cx="60" cy="60" r="44" fill="#0D1117" stroke="#6366F1" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- Modern Browser / App Window Frame -->
+  <rect x="26" y="26" width="68" height="68" rx="14" fill="#161B22" stroke="url(#reactGrad)" stroke-width="1.8" filter="url(#glowFrontend)"/>
+  
+  <!-- Window Header Dots -->
+  <circle cx="36" cy="36" r="2.5" fill="#EF4444"/>
+  <circle cx="44" cy="36" r="2.5" fill="#F59E0B"/>
+  <circle cx="52" cy="36" r="2.5" fill="#10B981"/>
+
+  <!-- React Orbital Rings & Core -->
+  <g transform="translate(60, 64)">
+    <!-- Central Glowing Core -->
+    <circle cx="0" cy="0" r="4" fill="#38BDF8" filter="url(#glowFrontend)"/>
+    <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+
+    <!-- Orbital Ellipse 1 (Horizontal) -->
+    <ellipse cx="0" cy="0" rx="20" ry="8" fill="none" stroke="url(#reactGrad)" stroke-width="1.6" transform="rotate(0)"/>
+    
+    <!-- Orbital Ellipse 2 (60 deg) -->
+    <ellipse cx="0" cy="0" rx="20" ry="8" fill="none" stroke="url(#reactGrad)" stroke-width="1.6" transform="rotate(60)"/>
+    
+    <!-- Orbital Ellipse 3 (120 deg) -->
+    <ellipse cx="0" cy="0" rx="20" ry="8" fill="none" stroke="url(#reactGrad)" stroke-width="1.6" transform="rotate(120)"/>
+    
+    <!-- Electron particle points -->
+    <circle cx="16" cy="0" r="1.8" fill="#FFFFFF"/>
+    <circle cx="-8" cy="14" r="1.8" fill="#FFFFFF"/>
+    <circle cx="-8" cy="-14" r="1.8" fill="#FFFFFF"/>
+  </g>
+</svg>

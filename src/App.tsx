@@ -10,6 +10,8 @@ import {
 } from "./components";
 import { config } from "./constants/config";
 import { SmoothScroll } from "./components/ui";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const App = () => {
   useEffect(() => {
@@ -33,6 +35,8 @@ const App = () => {
           <StarsCanvas />
         </div>
       </div>
+      <Analytics />
+      <SpeedInsights />
     </SmoothScroll>
   );
 };

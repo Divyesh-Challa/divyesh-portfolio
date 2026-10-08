@@ -45,19 +45,23 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: "Python & FastAPI Backends",
+    title: "Go & Python Backends",
+    subtitle: "Gin · FastAPI · High Concurrency",
     icon: backend,
   },
   {
-    title: "React & TypeScript Interfaces",
+    title: "Next.js & React Interfaces",
+    subtitle: "React 19 · App Router · Tailwind",
     icon: web,
   },
   {
-    title: "Chrome Extensions (MV3)",
+    title: "AI & Vector Search Pipelines",
+    subtitle: "pgvector · Gemini API · Speech STAR",
     icon: mobile,
   },
   {
     title: "Algorithmic Cost Optimization",
+    subtitle: "Combinatorics · Fuel Models · MV3",
     icon: creator,
   },
 ];

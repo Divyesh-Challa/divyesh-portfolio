@@ -31,6 +31,10 @@ import smartcart from "./smartcart.svg";
 import amazon_synthesizer from "./amazon_synthesizer.svg";
 import trackr from "./trackr.svg";
 import trackr_screenshot from "./trackr.png";
+import iconBackend from "./icon-backend.svg";
+import iconFrontend from "./icon-frontend.svg";
+import iconAi from "./icon-ai.svg";
+import iconAlgo from "./icon-algo.svg";
 
 export {
   logo,
@@ -63,4 +67,8 @@ export {
   amazon_synthesizer,
   trackr,
   trackr_screenshot,
+  iconBackend,
+  iconFrontend,
+  iconAi,
+  iconAlgo,
 };

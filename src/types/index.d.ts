@@ -35,7 +35,9 @@ export type TNavLink = {
   id: string;
 } & Required<Pick<TCommonProps, "title">>;
 
-export type TService = Required<Omit<TCommonProps, "name">>;
+export type TService = {
+  subtitle?: string;
+} & Required<Omit<TCommonProps, "name">>;
 
 export type TMotion = {
   direction: "up" | "down" | "left" | "right" | "";

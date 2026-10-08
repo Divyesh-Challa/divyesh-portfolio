@@ -12,10 +12,11 @@ import { SpotlightCard } from "../ui";
 interface IServiceCard {
   index: number;
   title: string;
+  subtitle?: string;
   icon: string;
 }
 
-const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
+const ServiceCard: React.FC<IServiceCard> = ({ index, title, subtitle, icon }) => (
   <Tilt
     glareEnable
     tiltEnable
@@ -38,9 +39,16 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
           className="h-20 w-20 object-contain"
         />
 
-        <h3 className="text-center text-[22px] font-bold text-white leading-[30px]">
-          {title}
-        </h3>
+        <div className="flex flex-col items-center text-center">
+          <h3 className="text-center text-[21px] font-bold text-white leading-[28px]">
+            {title}
+          </h3>
+          {subtitle && (
+            <p className="text-secondary mt-2.5 text-xs font-semibold tracking-wide">
+              {subtitle}
+            </p>
+          )}
+        </div>
       </SpotlightCard>
     </motion.div>
   </Tilt>

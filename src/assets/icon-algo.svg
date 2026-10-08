@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradAlgo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="algoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="optCurveGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="glowAlgo" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop -->
+  <circle cx="60" cy="60" r="54" fill="url(#bgGradAlgo)" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.35"/>
+  <circle cx="60" cy="60" r="44" fill="#0D1117" stroke="#F43F5E" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- Optimization Coordinate Grid (Subtle) -->
+  <path d="M30 86 L90 86 M30 86 L30 34" stroke="#475569" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Algorithmic Optimization / Convergence Curve -->
+  <path d="M32 42 C 40 76, 62 82, 88 84" fill="none" stroke="url(#optCurveGrad)" stroke-width="2.5" stroke-linecap="round" filter="url(#glowAlgo)"/>
+
+  <!-- Combinatorial Graph Tree / Decision Nodes -->
+  <g stroke="url(#algoGrad)" stroke-width="1.8">
+    <line x1="60" y1="36" x2="42" y2="54"/>
+    <line x1="60" y1="36" x2="78" y2="54"/>
+    <line x1="42" y1="54" x2="36" y2="72"/>
+    <line x1="42" y1="54" x2="52" y2="72"/>
+    <line x1="78" y1="54" x2="68" y2="72"/>
+    <line x1="78" y1="54" x2="84" y2="72"/>
+  </g>
+
+  <!-- Root Node -->
+  <circle cx="60" cy="36" r="4.5" fill="#F59E0B" filter="url(#glowAlgo)"/>
+  <circle cx="60" cy="36" r="2.2" fill="#FFFFFF"/>
+
+  <!-- Level 1 Nodes -->
+  <circle cx="42" cy="54" r="4" fill="#F43F5E" filter="url(#glowAlgo)"/>
+  <circle cx="42" cy="54" r="2" fill="#FFFFFF"/>
+
+  <circle cx="78" cy="54" r="4" fill="#EC4899" filter="url(#glowAlgo)"/>
+  <circle cx="78" cy="54" r="2" fill="#FFFFFF"/>
+
+  <!-- Optimal Leaf Target Nodes -->
+  <circle cx="36" cy="72" r="3.2" fill="#94A3B8"/>
+  <circle cx="52" cy="72" r="4" fill="#10B981" filter="url(#glowAlgo)"/>
+  <circle cx="52" cy="72" r="2" fill="#FFFFFF"/>
+  <circle cx="68" cy="72" r="3.2" fill="#94A3B8"/>
+  <circle cx="84" cy="72" r="3.5" fill="#8B5CF6"/>
+</svg>
