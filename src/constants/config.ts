@@ -44,8 +44,8 @@ export const config: TConfig = {
   hero: {
     name: "Divyesh Challa",
     p: [
-      "I build high-concurrency Go & Python backends, modern",
-      "Next.js web applications, and applied AI systems.",
+      "Computing Science student passionate about",
+      "clean architecture, algorithms, and practical AI.",
     ],
   },
   contact: {
